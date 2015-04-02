@@ -23,5 +23,19 @@ cd redbo-cloudfuse-*
 ./configure
 make
 make install
+cd ~
+
+# Make a directory to mount our first object storage volume
+mkdir ObjectStorage
+
+# Not quite done yet - need credentials for the volume
+# Go to the softlayer portal, storage tab, object storage selection
+# select the object storage name (maybe there is only one), select the location (Dallas 5 or other)
+# and click "View Credentials"
+# create a file .cloudfuse and in it:
+
+# username=[the Username line]
+# api_key=[API Key line]
+# authurl=[one of the Authentication endpoint lines]
 
  
